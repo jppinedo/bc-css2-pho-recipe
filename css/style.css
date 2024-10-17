@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+/* .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col"] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+} */
+[class*="col"] {
+    float: left;
+    padding: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.row {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* div {
+    border: double cornflowerblue;
+} */
+
+/* End box definitions */
+/* Begin element styling */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    /* 
+    This background was created using the following tool:
+    https://10015.io/tools/css-background-pattern-generator
+    */
+    background:
+        conic-gradient(from -60deg at 50% calc(100%/3),#283d3b 0 120deg,#0000 0),
+        conic-gradient(from 120deg at 50% calc(200%/3),#283d3b 0 120deg,#0000 0),
+        conic-gradient(from  60deg at calc(200%/3),#283d3b 60deg,#324f4b 0 120deg,#0000 0),
+        conic-gradient(from 180deg at calc(100%/3),#3c605a 60deg,#283d3b 0 120deg,#0000 0),
+        linear-gradient(90deg,#3c605a calc(100%/6),#324f4b 0 50%,
+        #3c605a 0 calc(500%/6), #324f4b 0);
+    background-size: 111px 64px;
+
+
+}
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 3rem auto;
+    /* border-radius: 2rem; */
+    background-color: #edddd4;
+    color: #283d3b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #197278;
+    font-family: "Fredoka", sans-serif;
+}
+a {
+    color: #c44536;
+}
+
+.header {
+    background-color: #772e25;
+    padding: 2rem 2rem;
+    color: #edddd4 !important;
+}
+
+.header h1, .header h2 {
+    color: #edddd4;
+}
+
+.link-menu li {
+    list-style: none;
+}
+
+.link-menu a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #c1b2a9;
+}
+
+.link-menu li:last-child a {
+    border-bottom: none;
+}
+
+.link-menu a:hover {
+    background-color: #ddd0c9;
+}
+
+.recipe-image {
+    margin: 0;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+}
+
+.recipe-image figcaption {
+    font-size: 0.7rem;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+.footer {
+    background-color: #197278;
+    padding: 1rem 2rem;
+    color: #edddd4;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer span {
+    float: right;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+    #links-col, #image-col, #form-col {
+        width: 33.33333333% !important;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .footer span {
+        float: none;
+        display: block;
+    }
+    [class*="col"] {
+        max-height: none;
+        overflow-y: auto;
+        width: 100% !important;
+    }
+    #links-col, #image-col, #form-col {
+        width: 100% !important;
+    }
+}
+  
